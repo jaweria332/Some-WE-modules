@@ -1,0 +1,70 @@
+ <style>
+            html{
+                width:100%;
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                font-family: cursive;
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box; 
+            }
+            #section1, #section2, #section3{
+                border: 2px solid black;
+                padding: 10px;
+                margin:10px;
+                width: 300px;
+                background-color: gray;
+                position: relative;
+            }
+            #wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #section1 .subh h3{
+                padding:10px;
+                background-color: rgb(228, 148, 164);
+                border-left: 2px black solid;
+                border-bottom: 2px black solid;
+            }
+            #section2 .subh h3{
+                padding:10px;
+                background-color: rgb(255, 79, 79);
+                border-left: 2px black solid;
+                border-bottom: 2px black solid;
+                color: white;
+            }
+            #section3 .subh h3{
+                padding:10px;
+                background-color: rgb(216, 197, 111);
+                border-left: 2px black solid;
+                border-bottom: 2px black solid;
+            }
+            #section1 .subh, #section2 .subh, #section3 .subh {
+                position: absolute; 
+                right: 0;
+                top:0;
+                width: 120px;
+                text-align: center;  
+         }
+         #section1 p, #section2 p, #section3 p{
+          margin-top: 40px;
+         }
+         #heading{
+             padding:20px;
+             margin: 30px;
+             text-align: center;
+             width: 100%;
+         }
+         @media only screen and (min-width: 600px) and (max-width: 991px) {
+             #section3 {
+                 width: 620px;
+             }
+         }
+        </style>
