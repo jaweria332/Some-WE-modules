@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Module 2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            background-color: gray;
+        }
+        .header .navbar h1{
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+            color: white;
+            float: left;
+        }
+        .header .navbar ul{
+            float: right;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        .header .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 5px;
+            margin-right: 15px;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        label #btn, label #cancel {
+                color: white;
+                font-size: 30px;
+                float: right;
+                line-height: 80px;
+                margin-right: 40px;
+                cursor: pointer;
+                display: none;
+            }
+            #chk{
+                display: none;
+            }
+        @media (max-width: 860px) {
+            label #btn {
+                display: block;
+            }
+            .navbar ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: gray;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+            }
+            .navbar ul li {
+                display: block;
+                margin-left: 50px;
+                margin-right: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            #chk:checked ~ ul {
+                left: 0;
+            }
+        }
+        #secWrap{
+            width: 100%;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+        }
+        #secWrap #sec1,#secWrap #sec2,#secWrap #sec3{
+            margin: 10px;
+            padding: 0 10px 10px 0;
+            width: 275px;
+            border: 1px solid black;
+            text-align: left;
+        }
+        #secWrap #sec1 h3,#secWrap #sec2 h3,#secWrap #sec3 h3{
+            width: 100px;
+            padding:5px;
+            margin:0 10px 10px 0;
+            text-align: center;
+            border: solid black 1px;
+            background-color: coral;
+        }
+        #secWrap #sec1 p,#secWrap #sec2 p,#secWrap #sec3 p{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <h1>OUR MENU</h1>
+            <input type="checkbox" id="chk">
+            <label for="chk">
+                <i class="fa fa-bars" aria-hidden="true" id="btn"></i>
+                <i class="fa fa-times" aria-hidden="true" id="cancel"></i>
+            </label>
+            <ul>
+                <li>Chicken</li>
+                <li>Sushi</li>
+                <li>Beef</li>
+            </ul>
+        </div>
+    </div>
+    <div id="secWrap">
+        <section id="sec1">
+            <h3>Chicken</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+            </p>
+        </section>
+
+        <section id="sec2">
+            <h3>Shushi</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,</p>
+        </section>
+
+        <section id="sec3">
+            <h3>Beef</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien quam, tempor tincidunt rhoncus non,</p>
+        </section>
+    </div>
+</body>
+</html>
